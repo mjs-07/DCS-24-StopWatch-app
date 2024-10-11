@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stopwatch"
+        android:fontFamily="@font/codefont"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        >
+    </TextView>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/img"
+        android:layout_below="@+id/stopwatch"
+        android:layout_above="@+id/timer"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="-325dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"
+        >
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timer"
+        android:textColor="@color/white"
+        android:text="00 : 00 : 000"
+        android:layout_centerHorizontal="true"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_marginTop="350dp"
+        >
+    </TextView>
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="START"
+        android:textColor="@color/white"
+        android:drawableLeft="@drawable/baseline_play_arrow_24"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/timer"
+        android:layout_marginTop="20dp"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/stop_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STOP"
+        android:textColor="@color/white"
+        android:drawableLeft="@drawable/baseline_pause_24"
+        android:textStyle="bold"
+        android:enabled="false"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/start_btn"
+        android:layout_marginTop="20dp"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/reset_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        android:textColor="@color/white"
+        android:drawableLeft="@drawable/baseline_refresh_24"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/stop_btn"
+        android:layout_marginTop="20dp"
+        android:enabled="false"
+        >
+    </Button>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BottomNavView"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_background"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:elevation="7dp"
+        app:menu="@menu/bottom_menu"
+        app:itemIconSize="30dp"
+        app:itemTextColor="@color/golden"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="selected"/>
+
+
+</RelativeLayout>
